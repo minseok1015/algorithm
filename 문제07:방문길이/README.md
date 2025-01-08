@@ -1,4 +1,5 @@
 # 방문길이
+https://school.programmers.co.kr/learn/courses/30/lessons/49994
 ## 문제 설명
 게임 캐릭터를 4가지 명령어를 통해 움직이려 합니다. 명령어는 다음과 같습니다.
 
