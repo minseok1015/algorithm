@@ -1,5 +1,9 @@
 # 괄호 회전하기
 
+1월 8일
+
+1월 9일
+
 https://school.programmers.co.kr/learn/courses/30/lessons/76502
 
 ## 문제 설명
