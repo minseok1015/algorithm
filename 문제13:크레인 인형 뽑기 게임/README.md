@@ -1,5 +1,7 @@
 # 크레인 인형 뽑기 게임
 
+1월 9일
+
 https://school.programmers.co.kr/learn/courses/30/lessons/64061
 
 ## 문제 설명
