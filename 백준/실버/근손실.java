@@ -1,4 +1,3 @@
-
 import java.io.*;
 import java.util.*;
 
@@ -8,6 +7,8 @@ public class Main {
     private static int[] w;
     private static int k;
     private static int n;
+    private static boolean[] selected;
+
 
     public static void main(String[] args)throws IOException{
         BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
@@ -19,9 +20,9 @@ public class Main {
         String[] weight = br.readLine().split(" ");
         w = Arrays.stream(weight).mapToInt(Integer::parseInt).toArray();  //각 운동당 얻는 근육량
 
-        boolean[] selected = new boolean[n];
+        selected = new boolean[n];
 
-        backTracking(selected,500);
+        backTracking(500);
 
         System.out.println(answer);
     }
@@ -34,10 +35,7 @@ public class Main {
     }
 
 
-
-
-
-    private static void backTracking(boolean[] selected,int muscle){
+    private static void backTracking(int muscle){
         if(isFinished(selected)){
             answer++;
             return;
@@ -48,9 +46,9 @@ public class Main {
                 continue;
             }
             if(muscle-k+w[i]>=500){
-                boolean[] list = Arrays.copyOf(selected,selected.length);
-                list[i]=true;
-                backTracking(list,muscle-k+w[i]);
+                selected[i]=true;
+                backTracking(muscle-k+w[i]);
+                selected[i]=false;
             }
         }
     }
