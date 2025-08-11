@@ -54,6 +54,8 @@ class Main {
         // }
         // System.out.println();
 
+
+        //각집에서 X까지 가는 Cost를 계산해서 더함
         for(int i=1;i<=N;i++){
             pq = new PriorityQueue<>((o1,o2)-> Integer.compare(o1.cost,o2.cost));
             pq.add(new Node(i,0));
